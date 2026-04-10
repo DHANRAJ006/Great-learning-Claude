@@ -31,13 +31,13 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // ── Routes ─────────────────────────────────────────────────
-app.use('/api/courses',  courseRoutes);
-app.use('/api/live',     liveRoutes);
-app.use('/api/domains',  domainRoutes);
-app.use('/api/user',     userRoutes);
+app.use('/courses',  courseRoutes);
+app.use('/live',     liveRoutes);
+app.use('/domains',  domainRoutes);
+app.use('/user',     userRoutes);
 
 // ── Health check ────────────────────────────────────────────
-app.get('/api/health', (_req, res) => {
+app.get('/health', (_req, res) => {
   res.json({ status: 'ok', time: new Date().toISOString() });
 });
 
@@ -46,7 +46,7 @@ const Course      = require('./models/Course');
 const LiveSession = require('./models/LiveSession');
 const Domain      = require('./models/Domain');
 
-app.get('/api/search', async (req, res, next) => {
+app.get('/search', async (req, res, next) => {
   try {
     const q = req.query.q?.trim();
     if (!q || q.length < 2) return res.json([]);

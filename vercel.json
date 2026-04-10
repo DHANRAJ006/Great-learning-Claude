@@ -5,12 +5,13 @@
       "routePrefix": "/",
       "framework": "vite",
       "installCommand": "npm install",
-      "buildCommand": "npx vite build"
+      "buildCommand": "npm run build"
     },
     "backend": {
       "entrypoint": "backend",
-      "routePrefix": "/_/backend",
-      "installCommand": "npm install"
+      "routePrefix": "/api",
+      "installCommand": "npm install",
+      "startCommand": "npm start"
     }
   }
 }
