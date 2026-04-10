@@ -3,8 +3,10 @@ dist/
 frontend/dist/
 frontend/node_modules/
 backend/node_modules/
-frontend/package-lock.json
-backend/package-lock.json
+
+# Keep lock files for deterministic builds on Vercel
+# frontend/package-lock.json
+# backend/package-lock.json
 npm-debug.log*
 .DS_Store
 .vscode/
