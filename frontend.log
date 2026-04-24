@@ -1,0 +1,282 @@
+
+> learnflow-client@1.0.0 dev
+> vite
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+  VITE v5.4.21  ready in 99 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+4:53:23 PM [vite] hmr update /src/pages/HomePage.jsx
+5:09:36 PM [vite] hmr update /src/components/CourseCard.jsx
+11:37:24 AM [vite] hmr update /src/pages/HomePage.jsx
+11:38:12 AM [vite] hmr update /src/pages/LivePage.jsx
+1:10:48 PM [vite] hmr update /src/App.jsx
+1:12:16 PM [vite] hmr update /src/components/AIChatBot.jsx
+1:13:38 PM [vite] hmr update /src/components/SearchBar.jsx
+1:19:48 PM [vite] hmr update /src/App.jsx
+1:20:54 PM [vite] hmr update /src/pages/HomePage.jsx
+1:21:30 PM [vite] Internal server error: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx: Unexpected token (289:0)
+
+  287 |   );
+  288 | }
+> 289 |
+      | ^
+  Plugin: vite:react-babel
+  File: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx:289:0
+  287|    );
+  288|  }
+  289|  
+     |  ^
+      at constructor (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.unexpected (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6619:16)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11442:22)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12421:16)
+      at JSXParserMixin.parseExpression (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12895:23)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseStatementListItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12747:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:61)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseBlock (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13297:10)
+      at JSXParserMixin.parseFunctionBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12100:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12086:10)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13445:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12403:14)
+      at JSXParserMixin.parseFunction (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13444:10)
+      at JSXParserMixin.parseFunctionStatement (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13125:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12791:21)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:261:32)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:223:11)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:189:28
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+1:21:34 PM [vite] hmr update /src/pages/CoursesPage.jsx
+1:23:28 PM [vite] hmr update /src/components/CourseCard.jsx
+1:26:58 PM [vite] Pre-transform error: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx: Unexpected token (289:0)
+
+  287 |   );
+  288 | }
+> 289 |
+      | ^
+1:26:58 PM [vite] Internal server error: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx: Unexpected token (289:0)
+
+  287 |   );
+  288 | }
+> 289 |
+      | ^
+  Plugin: vite:react-babel
+  File: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx:289:0
+  287|    );
+  288|  }
+  289|  
+     |  ^
+      at constructor (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.unexpected (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6619:16)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11442:22)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12421:16)
+      at JSXParserMixin.parseExpression (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12895:23)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseStatementListItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12747:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:61)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseBlock (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13297:10)
+      at JSXParserMixin.parseFunctionBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12100:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12086:10)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13445:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12403:14)
+      at JSXParserMixin.parseFunction (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13444:10)
+      at JSXParserMixin.parseFunctionStatement (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13125:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12791:21)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:261:32)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:223:11)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:189:28
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+1:27:10 PM [vite] Internal server error: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx: Unexpected token (289:0)
+
+  287 |   );
+  288 | }
+> 289 |
+      | ^
+  Plugin: vite:react-babel
+  File: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx:289:0
+  287|    );
+  288|  }
+  289|  
+     |  ^
+      at constructor (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.unexpected (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6619:16)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11442:22)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12421:16)
+      at JSXParserMixin.parseExpression (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12895:23)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseStatementListItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12747:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:61)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseBlock (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13297:10)
+      at JSXParserMixin.parseFunctionBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12100:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12086:10)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13445:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12403:14)
+      at JSXParserMixin.parseFunction (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13444:10)
+      at JSXParserMixin.parseFunctionStatement (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13125:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12791:21)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:261:32)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:223:11)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:189:28
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+1:27:27 PM [vite] Internal server error: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx: Unexpected token (289:0)
+
+  287 |   );
+  288 | }
+> 289 |
+      | ^
+  Plugin: vite:react-babel
+  File: /Users/hari/Downloads/Great-learning-Claude-main 2/frontend/src/pages/HomePage.jsx:289:0
+  287|    );
+  288|  }
+  289|  
+     |  ^
+      at constructor (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6599:19)
+      at JSXParserMixin.unexpected (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:6619:16)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11442:22)
+      at JSXParserMixin.parseExprAtom (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:4764:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11081:23)
+      at JSXParserMixin.parseUpdate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11066:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:11046:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10899:61)
+      at JSXParserMixin.parseExprOps (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10904:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10881:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10831:21)
+      at JSXParserMixin.parseExpressionBase (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10784:23)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:39
+      at JSXParserMixin.allowInAnd (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12421:16)
+      at JSXParserMixin.parseExpression (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:10780:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12895:23)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseStatementListItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12747:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:61)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseBlock (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13297:10)
+      at JSXParserMixin.parseFunctionBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12100:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12086:10)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13445:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12403:14)
+      at JSXParserMixin.parseFunction (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13444:10)
+      at JSXParserMixin.parseFunctionStatement (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13125:17)
+      at JSXParserMixin.parseStatementContent (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12791:21)
+      at JSXParserMixin.parseStatementLike (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:13309:10)
+      at JSXParserMixin.parseProgram (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:12612:25)
+      at JSXParserMixin.parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14488:25)
+      at parse (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/parser/lib/index.js:14522:38)
+      at parser (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:261:32)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:223:11)
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/gensync/index.js:189:28
+      at /Users/hari/Downloads/Great-learning-Claude-main 2/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+1:38:11 PM [vite] hmr update /src/pages/HomePage.jsx
+1:50:22 PM [vite] hmr update /src/pages/HomePage.jsx
+2:33:45 PM [vite] hmr update /@fs/Users/hari/Downloads/Great-learning-Claude-main 2/css/pages.css
+2:34:39 PM [vite] hmr update /src/pages/HomePage.jsx
+2:34:50 PM [vite] hmr update /src/App.jsx
+2:44:55 PM [vite] hmr update /src/components/AIChatBot.jsx
+2:45:33 PM [vite] hmr update /src/App.jsx
