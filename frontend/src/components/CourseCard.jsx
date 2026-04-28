@@ -42,32 +42,13 @@ export default function CourseCard({ course }) {
 
   const handleCardClick = () => {
     addToRecentlyViewed(course); // Track as viewed
-    if (!user) {
-      showToast('Please sign in to watch previews', 'error');
-      navigate('/login');
-      return;
-    }
-    if (videoUrl) {
-      setShowQuickInfo(true);
-    } else {
-      showToast(`▶ Opening "${title.slice(0, 30)}…"`, 'info');
-    }
+    navigate(`/course/${_id}`);
   };
 
   const handleEnroll = (e) => {
     e.stopPropagation();
-    if (!user) {
-      showToast('Please sign in to enroll', 'error');
-      navigate('/login');
-      return;
-    }
-    
-    if (price === 0) {
-      showToast(`🎉 Enrolled in "${title.slice(0, 40)}…"`, 'success');
-      return;
-    }
-    
-    navigate(`/checkout/${_id}`);
+    addToRecentlyViewed(course); // Track as enrolled
+    navigate(`/course/${_id}`);
   };
 
   return (

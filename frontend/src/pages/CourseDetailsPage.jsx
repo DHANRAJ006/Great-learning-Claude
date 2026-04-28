@@ -8,13 +8,100 @@ import CourseCard from '../components/CourseCard.jsx';
 import VideoPreviewModal from '../components/VideoPreviewModal.jsx';
 import { useApp } from '../context/AppContext.jsx';
 import { STATIC_COURSES } from '../data/staticData.js';
+import { useLocation } from 'react-router-dom';
+
+function PaymentModal({ course, onClose, onComplete }) {
+  const [method, setMethod] = React.useState('card');
+  const [loading, setLoading] = React.useState(false);
+
+  const handlePay = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      onComplete();
+    }, 2000);
+  };
+
+  return (
+    <div className="modal-backdrop" style={{ zIndex: 10001 }}>
+      <div className="modal-content" style={{ maxWidth: '450px', padding: 'var(--space-8)' }}>
+        <button className="modal-close" onClick={onClose}>✕</button>
+        <div style={{ textAlign: 'center', marginBottom: 'var(--space-6)' }}>
+          <div style={{ fontSize: '3rem', marginBottom: 'var(--space-2)' }}>💳</div>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800 }}>Complete Payment</h2>
+          <p style={{ color: 'var(--text-secondary)' }}>You are enrolling in: <br/><strong>{course.title}</strong></p>
+        </div>
+
+        <div style={{ background: 'var(--bg-surface-2)', padding: 'var(--space-4)', borderRadius: 'var(--radius-lg)', marginBottom: 'var(--space-6)', border: '1px solid var(--border-subtle)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <span>Course Price:</span>
+            <span>₹{course.price.toLocaleString('en-IN')}</span>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 800, fontSize: '1.2rem', color: 'var(--accent-1)', borderTop: '1px solid var(--border-subtle)', paddingTop: '8px' }}>
+            <span>Total Payable:</span>
+            <span>₹{course.price.toLocaleString('en-IN')}</span>
+          </div>
+        </div>
+
+        <div style={{ marginBottom: 'var(--space-6)' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--space-2)', fontWeight: 600 }}>Payment Method</label>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            <button 
+              className={`btn ${method === 'card' ? 'btn-primary' : 'btn-ghost'}`} 
+              onClick={() => setMethod('card')}
+              style={{ fontSize: '0.9rem' }}
+            >
+              Credit/Debit Card
+            </button>
+            <button 
+              className={`btn ${method === 'upi' ? 'btn-primary' : 'btn-ghost'}`} 
+              onClick={() => setMethod('upi')}
+              style={{ fontSize: '0.9rem' }}
+            >
+              UPI / QR Code
+            </button>
+          </div>
+        </div>
+
+        {method === 'card' ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: 'var(--space-6)' }}>
+            <input type="text" placeholder="Card Number" className="input-field" style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-surface)' }} />
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <input type="text" placeholder="MM/YY" className="input-field" style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-surface)' }} />
+              <input type="text" placeholder="CVV" className="input-field" style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-surface)' }} />
+            </div>
+          </div>
+        ) : (
+          <div style={{ textAlign: 'center', marginBottom: 'var(--space-6)', padding: 'var(--space-4)', background: '#fff', borderRadius: '12px', border: '1px solid #ddd' }}>
+             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LearnFlowPayment" alt="QR Code" style={{ width: '150px', height: '150px' }} />
+             <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '8px' }}>Scan with any UPI App (GPay, PhonePe, etc.)</p>
+          </div>
+        )}
+
+        <button 
+          className="btn btn-primary" 
+          style={{ width: '100%', padding: 'var(--space-3)', fontSize: '1.1rem' }}
+          onClick={handlePay}
+          disabled={loading}
+        >
+          {loading ? 'Processing Payment...' : `Pay ₹${course.price.toLocaleString('en-IN')}`}
+        </button>
+        <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 'var(--space-4)' }}>
+          Secure 256-bit SSL Encrypted Payment
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function CourseDetailsPage() {
   // ── 1. Hooks (Must be at top level) ───────────────────────
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const { showToast, user, addToRecentlyViewed } = useApp();
   const [showVideo, setShowVideo] = React.useState(false);
+  const [showPayment, setShowPayment] = React.useState(false);
   const [isPlayingInline, setIsPlayingInline] = React.useState(false);
   const [currentTime, setCurrentTime] = React.useState(0);
   const playerRef = React.useRef(null);
@@ -81,19 +168,26 @@ export default function CourseDetailsPage() {
   };
 
   const handleEnroll = () => {
+    addToRecentlyViewed(course);
     if (!user) {
-      showToast('Please sign in to enroll', 'error');
-      navigate('/login');
+      showToast('Please sign in to enroll', 'info');
+      navigate('/login', { state: { from: location } });
       return;
     }
     
-    if (course.price === 0) {
-      showToast(`🎉 Enrolled in "${course.title.slice(0, 40)}…"`, 'success');
-      setIsPlayingInline(true);
+    if (course.price > 0) {
+      setShowPayment(true);
       return;
     }
     
-    navigate(`/checkout/${id}`);
+    showToast(`🎉 Enrolled in "${course.title.slice(0, 40)}…"`, 'success');
+    setIsPlayingInline(true);
+  };
+
+  const handlePaymentComplete = () => {
+    setShowPayment(false);
+    showToast(`✅ Payment Successful! Enrolled in "${course.title.slice(0, 30)}…"`, 'success');
+    setIsPlayingInline(true);
   };
 
   const getAIInsight = () => {
@@ -337,6 +431,13 @@ export default function CourseDetailsPage() {
           instructor={course.instructor}
           whatYoullLearn={course.whatYoullLearn}
           onClose={() => setShowVideo(false)}
+        />
+      )}
+      {showPayment && (
+        <PaymentModal 
+          course={course} 
+          onClose={() => setShowPayment(false)} 
+          onComplete={handlePaymentComplete}
         />
       )}
     </section>

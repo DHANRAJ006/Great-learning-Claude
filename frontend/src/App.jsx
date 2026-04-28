@@ -51,7 +51,7 @@ function AppRoutes() {
           {/* Auth Route - Redirect to home if already logged in */}
           <Route path="/login"   element={user ? <Navigate to="/" replace /> : <AuthPage />} />
           
-          <Route path="/course/:id" element={<ProtectedRoute><CourseDetailsPage /></ProtectedRoute>} />
+          <Route path="/course/:id" element={<CourseDetailsPage />} />
           <Route path="/checkout/:id" element={<ProtectedRoute><CheckoutPage /></ProtectedRoute>} />
           <Route path="/live"       element={<ProtectedRoute><LivePage       /></ProtectedRoute>} />
           
