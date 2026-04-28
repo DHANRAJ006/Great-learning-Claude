@@ -23,9 +23,9 @@ function PaymentModal({ course, onClose, onComplete }) {
   };
 
   return (
-    <div className="modal-backdrop" style={{ zIndex: 10001 }}>
-      <div className="modal-content" style={{ maxWidth: '450px', padding: 'var(--space-8)' }}>
-        <button className="modal-close" onClick={onClose}>✕</button>
+    <div className="modal-overlay" style={{ zIndex: 10001 }}>
+      <div className="modal" style={{ maxWidth: '450px', padding: 'var(--space-8)', position: 'relative' }}>
+        <button className="modal-close" onClick={onClose} style={{ position: 'absolute', top: '16px', right: '16px' }}>✕</button>
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-6)' }}>
           <div style={{ fontSize: '3rem', marginBottom: 'var(--space-2)' }}>💳</div>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800 }}>Complete Payment</h2>
@@ -35,11 +35,11 @@ function PaymentModal({ course, onClose, onComplete }) {
         <div style={{ background: 'var(--bg-surface-2)', padding: 'var(--space-4)', borderRadius: 'var(--radius-lg)', marginBottom: 'var(--space-6)', border: '1px solid var(--border-subtle)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
             <span>Course Price:</span>
-            <span>₹{course.price.toLocaleString('en-IN')}</span>
+            <span>₹{Number(course.price).toLocaleString('en-IN')}</span>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 800, fontSize: '1.2rem', color: 'var(--accent-1)', borderTop: '1px solid var(--border-subtle)', paddingTop: '8px' }}>
             <span>Total Payable:</span>
-            <span>₹{course.price.toLocaleString('en-IN')}</span>
+            <span>₹{Number(course.price).toLocaleString('en-IN')}</span>
           </div>
         </div>
 
@@ -168,14 +168,17 @@ export default function CourseDetailsPage() {
   };
 
   const handleEnroll = () => {
+    if (!course) return;
     addToRecentlyViewed(course);
+    
     if (!user) {
       showToast('Please sign in to enroll', 'info');
       navigate('/login', { state: { from: location } });
       return;
     }
     
-    if (course.price > 0) {
+    const price = Number(course.price);
+    if (price > 0) {
       setShowPayment(true);
       return;
     }
@@ -345,7 +348,7 @@ export default function CourseDetailsPage() {
             </div>
           </div>
 
-          {course.price > 0 && (
+          {Number(course.price) > 0 && (
             <button 
               onClick={handleEnroll}
               className="btn btn-primary" 
@@ -354,7 +357,7 @@ export default function CourseDetailsPage() {
               Enrol Now
             </button>
           )}
-          {course.price === 0 && (
+          {Number(course.price) === 0 && (
             <button 
               onClick={handleEnroll}
               className="btn btn-primary" 
