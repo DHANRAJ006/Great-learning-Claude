@@ -355,18 +355,16 @@ export default function CourseDetailsPage() {
             </button>
           )}
           {course.price === 0 && (
-            <div style={{ 
-              marginTop: 'var(--space-6)', 
-              padding: 'var(--space-4)', 
-              textAlign: 'center', 
-              background: 'rgba(16, 185, 129, 0.1)', 
-              borderRadius: '8px',
-              border: '1px solid rgba(16, 185, 129, 0.3)',
-              color: '#10b981',
-              fontWeight: 700
-            }}>
-              ✓ This course is currently FREE
-            </div>
+            <button 
+              onClick={handleEnroll}
+              className="btn btn-primary" 
+              style={{ 
+                width: '100%', marginTop: 'var(--space-6)', padding: 'var(--space-4)', 
+                fontSize: '1.1rem', background: '#10b981', border: 'none' 
+              }}
+            >
+              Enrol Free Now
+            </button>
           )}
         </div>
       </div>
